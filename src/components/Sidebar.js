@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "./Nav";
 import logo from "../image/logo.png";
 import { Card } from "./Card";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -31,10 +32,10 @@ const Sidebar = () => {
 
       <aside
         id="default-sidebar"
-        className="fixed top-0 shadow-2xl z-40 w-[271px] h-auto transition-transform -translate-x-full sm:translate-x-0"
+        className="fixed top-0 shadow-2xl z-40 w-[271px] h-[1024px] transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
       >
-        <div className="h-full px-3 py-4 overflow-y-auto scrollbar-hide">
+        <div className="h-full px-3 py-4 overflow-y-auto ">
           <button className="text-center m-7 flex items-center">
             <img src={logo} alt="" className="w-10 h-10 mr-4" />
             <span className="text-[28px] font-normal font-podkova">
@@ -140,8 +141,8 @@ const Sidebar = () => {
               </a>
             </li>
             <li>
-              <a
-                href="/"
+              <Link
+                to="/contactus"
                 className="flex items-center p-2 text-xl font-medium  rounded-lg text-black hover:bg-gray-200 font-podkova ml-10"
               >
                 <img
@@ -151,7 +152,7 @@ const Sidebar = () => {
                 />
 
                 <span className="ml-8">Contact Us</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a
